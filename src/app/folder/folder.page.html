@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>DataApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-list>
+  <ion-item *ngFor="let tekliData of topluData">
+    <ion-label>{{tekliData.il}}</ion-label>
+    <img class="havaIcon" src="{{havaURL+tekliData.r1+'.svg'}}">
+    <ion-badge color="{{tekliData.h1>=25 ? 'danger':'primary'}}">
+   
+      {{tekliData.h1}}</ion-badge>
+  </ion-item>
+</ion-list>
+
+
+</ion-content>
